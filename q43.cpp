@@ -33,27 +33,30 @@ int main()
   else if (kg_wit > 0 && kg_wit < 2)
   {
     rate = 1.10;
-    total_charges = (distance / 500.00) * 1.10;
-    cout << "Your total Charges is:" << total_charges << endl;
+    // total_charges = (distance / 500.00) * 1.10;
+    // cout << "Your total Charges is:" << total_charges << endl;
   }
   else if (kg_wit > 2 && kg_wit < 6)
   {
     rate = 2.20;
-    total_charges = (distance / 500.00) * 2.20;
-    cout << "Your total charges are:" << total_charges << endl;
+    // total_charges = (distance / 500.00) * 2.20;
+    // cout << "Your total charges are:" << total_charges << endl;
   }
   else if (kg_wit > 6 && kg_wit < 10)
   {
     rate = 3.70;
-    total_charges = (distance / 500.00) * 3.70;
-    cout << "your total charges are:" << total_charges << endl;
+    // total_charges = (distance / 500.00) * 3.70;
+    // cout << "your total charges are:" << total_charges << endl;
   }
   else if (kg_wit > 10 && kg_wit < 20)
   {
     rate = 4.80;
-    total_charges = (distance / 500.00) * 4.80;
-    cout << "your total_charges are: " << total_charges << endl;
+    // total_charges = (distance / 500.00) * 4.80;
+    // cout << "your total_charges are: " << total_charges << endl;
   }
+
+  total_charges = (distance / 500.00) * rate;
+  cout << "your total_charges are: " << total_charges << endl;
   
 
 }
