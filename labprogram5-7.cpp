@@ -17,7 +17,7 @@ int main()
   powernum = 1;
   while(i < exp)
   {
-    powernum = powernum * base;
+    powernum =* 2;
     i++;
     cout << powernum << endl;
 
