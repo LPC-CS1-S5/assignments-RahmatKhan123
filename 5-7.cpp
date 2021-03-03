@@ -8,16 +8,18 @@ using namespace std;
 
 int main()
 {
-  int base, exp;
-  int i;
-  double powernum;
-  cout << "input the base and power number:" << endl;
-  cin >> base >> exp;
-  
-  i = 0;
-  powernum = 1;
-  if ( exp > 0)
-  {
+	int base, exp;
+	int i, flag;
+	double powernum;
+	cout << "input the base and power number:" << endl;
+	cin >> base >> exp;
+	
+	i = 0;
+	powernum = 1;
+	if (exp < 0){
+		flag = 1
+		exp *= -1;
+	}
 	while(i < exp)
 	{
 		powernum *= 2.0;
@@ -25,16 +27,8 @@ int main()
 		cout << powernum << endl;
 
 	}
-  }
-  else
-  {
-	exp *= -1; // -3 => 3
-	while(i < exp)
-	{
-		powernum *= 2.0;
-		i++;
-	}
-	powernum = 1.0/powernum;
+	if(flag) 
+		powernum = 1.0/powernum;
 	cout << powernum << endl;
   }
 }
