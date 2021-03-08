@@ -1,31 +1,30 @@
-//make a program that find the prim numbers in a given range. 
+//Programming Lab 5-11
+//Make a program that find the prime numbers in the given range. 
+//example) find the prime numbers in the range [1..100]
+//2, 3, 5, 7, ... , 97//
 #include <iostream>
 using namespace std;
 int main()
 {
-  int begin, end;
-  int num;
-  int i, flag;
+  int begin = 1, end = 100;
+  
 
-  cout << "input two numbers in order to find the prim number in that Range: ";
-  cin >> begin >> end;
-  num = begin;
-  while (num <= end)
+  cout << "prim numbers in range from: " << begin << " to " << end << " is: " << endl;
+  while (begin < end)
   {
-    flag = 0;
-        for (num = 2; i < num/i;)
-        {
-          if (i % num == 0)
-          {
-
-              break;
-          }
-
-        }
-    if (flag)
-    //if (end >= 100)
-        cout << num << " is not prim ";
-    else
-      cout << num << " is prim ";
+    int flag = 0;
+    for (int i = 2; i <= begin / 2; i++)
+    {
+      if (begin % i == 0)
+      {
+        flag = 1;
+        break;
+      }
+      
+    }
+    if (flag = 0)
+        cout << begin << " ";
+    begin++;
   }
+  
 }
