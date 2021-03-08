@@ -6,25 +6,28 @@
 using namespace std;
 int main()
 {
-  int begin = 1, end = 100;
-  
+  int i, num, end;
+  cout << "i will find the prim number up to 100: Input 100: " << endl;
+  cin >> end;
 
-  cout << "prim numbers in range from: " << begin << " to " << end << " is: " << endl;
-  while (begin < end)
-  {
-    int flag = 0;
-    for (int i = 2; i <= begin / 2; i++)
+
+  //while (begin < end)
+  //{
+    //i//nt flag = 0;
+    for (num = 2; num <= end; num++)
     {
-      if (begin % i == 0)
+      for(i = 2; i <= (num/2); i++)
       {
-        flag = 1;
-        break;
+        if (num % i == 0)
+        {
+          i = num;
+          break;
+          
+        }
       }
-      
+      if (i != num)
+      {
+        cout << num << " ";
+      }
     }
-    if (flag = 0)
-        cout << begin << " ";
-    begin++;
-  }
-  
 }
