@@ -25,7 +25,7 @@ int main()
   {
     rdnum = rand() 100 / 5;
     min_val = i;
-    if (min_val < rdnum);
+    if (min_val <= rdnum);
     {
       cout << "the minimum number of five random is:" << min_val << endl;
     }
