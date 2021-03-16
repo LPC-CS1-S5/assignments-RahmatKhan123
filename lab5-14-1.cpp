@@ -10,6 +10,7 @@ Create and Open the text file.
 Write N random numbers into a file.*/
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
 using namespace std;
 int main()
 {
