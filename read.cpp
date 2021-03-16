@@ -15,6 +15,6 @@ int main()
   }
   while (ifs > stuname)
   {
-    cout << stuname << "this was writen from file: " << emdl;
+    cout << stuname << "this was writen from file: " << endl;
   }
-  
+} 
