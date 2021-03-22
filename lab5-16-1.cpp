@@ -23,6 +23,7 @@ int main()
   }
   cout << "Enter the number of students: ";
   cin >> N;
+  ofs << N << endl;
 
   for (int i = 0; i < N; i++)
   {

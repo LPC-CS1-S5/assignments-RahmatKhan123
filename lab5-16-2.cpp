@@ -3,43 +3,45 @@
 using namespace std;
 int main()
 {
-  ofstream ofs;
+  ifstream ifs;
 //   int N = 5; // N must be the user input
   int N ;
   int num;
   int sum = 0;
   string stuname;
-  double score1, score2, average;
+  double score1, score2, average, total;
 
 //   cout << "what is the student's name: " << endl;
 //   cin >> stuname;
 // why above two lines are here?
 
-  ofs.open("rahmat.txt");
-  if(ofs.fail())
+  ifs.open("rahmat.txt");
+  if(ifs.fail())
   {
     cerr << "file open Error! \n";
     exit(0);
 
   }
-  cout << "Enter the number of students: ";
-  cin >> N;
+  
+  ifs >> N;
+  for (int i = 0; i < N; i++){
 
-  for (int i = 0; i < N; i++)
-  {
-    cout << "what is student name: \n";
-    cin >> stuname;
-	ofs << stuname << endl;
-    for (int j = 0; j < 2; j++)
-    {
-      cout << "what is student scores \n";
-      cin >> score1 >> score2;
-      ofs << score1 << score2 << endl;
-    }
+    ifs >> stuname;
+    ifs >> score1 >> score2;
+    cout << stuname << " " ;
+    cout << score1 << " " ;
+    cout << score2 << endl ;
+    sum = score1 + score2;
+    average = sum /2.0;
+    cout << "average is : " << average << endl;
+    cout << "sum is : " << sum << endl;
+    total = total + sum;
+  
   }
-      sum = score1 + score2;
-      average = sum / 2.0;
-  ofs.close();
-
+  total = total;
+  average = sum / 2.0;
+  cout << " the average of all student is: " << average << endl;
+  cout << "the total score of all student is: " << total << endl;
+  ifs.close();
 
 }
