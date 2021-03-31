@@ -20,8 +20,6 @@ int getRdnum(void)
 int isGreater(int &n)
 {
   static int perc = 0;
-  int a, b;
-  a = n;
   if (perc ==0)
   {
     perc = n;
@@ -63,3 +61,6 @@ int main()
     }
   }
 }
+// in this program i used one function to generate 10 random number in the range 1 to 50. i used a for loop in this function to generate 10 random number. 
+// then i used another function to check if the number is greater then the perceding number, in this function i used a static varaible to keep the perceding varaible value stable so we can compare to next coming variable. i uesd two if (statement and ) one else to make the comparison.
+//in the main i created the txt.file to the number be writen in to it. then used a while loop to check the random number that are created are 10 of them. by using two varaible i and j.
