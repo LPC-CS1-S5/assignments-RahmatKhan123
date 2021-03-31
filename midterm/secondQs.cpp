@@ -45,14 +45,7 @@ int main()
   {
     cout << "these student have the highest total grades:" << j << endl;
   }
-  /*
-  {
-    cout <<
-  }
-  total = total;
-  average = sum / 2.0;
-  cout << " the average of all student is: " << average << endl;
-  cout << "the total score of all student is: " << total << endl;*/
+  
   ifs.close();
 
 }
