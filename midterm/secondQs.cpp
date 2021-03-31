@@ -26,12 +26,12 @@ int main()
 
   }
   
-  ifs >> N;
-  for (int i = 0; i < N; i++){
+//   ifs >> N;
+  for (N = 0; N <= 10; N++){
 
     ifs >> name;
     ifs >> score1 >> score2;
-    cout << name << " " ;
+    cout << "Name : " << name << " " ;
     cout << score1 << " " ;
     cout << score2 << endl ;
     sum = score1 + score2;
@@ -39,13 +39,21 @@ int main()
     cout << "average is : " << average << endl;
     cout << "sum is : " << sum << endl;
     total = total + sum;
+
+  if (average > 80)
+    cout << "the student whose average is above 80 are: " << average << " " << name << endl;
+  }
   
-  }
-  for (int j = (total > 80); j < 3; j++)
-  {
-    cout << "these student have the highest total grades:" << j << endl;
-  }
+
+  
   
   ifs.close();
 
 }
+//i have initialized varaibles one string for students name, one integer for students count, two integers for students score and 3 doublw variables to keep the sum, average and total of the scores.
+//then i used the if.open command to open the text filw for the program to read from.
+//then i used a for loop to count the student and print the students list with their name and their scores. i used the varaible N the keep the count starts from student one and terminta when the cound it 10. because there is 10 total students.
+//then i did the aritmathic operation to get the total, sum and average of each student scores.
+
+// then i used a if(statement to print out the students who has hight average than 80.)
+//then close the file and the operating on the read file is done.
