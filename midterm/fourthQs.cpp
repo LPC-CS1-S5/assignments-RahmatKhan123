@@ -43,3 +43,7 @@ int getRdnum(int n1, int n2)
   num = rand() % (n2 - n1 + 1));
 
 }
+//in this function overloading program, i used 3 functions with same name but different parameters.
+//1st function with no parameter generate a random number between 1 to 100.
+// second function with parameter n2, generate a random number from from 1 to n2.
+// 3rd function generate a random number n1 to n2, and in the main function i call all the 3 overloeading functions, and print them out.
