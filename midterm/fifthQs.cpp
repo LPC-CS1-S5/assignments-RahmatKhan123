@@ -75,3 +75,11 @@ void fileWrite (ofstream &ofs, int div)
     exit(0);
   }
 }
+
+// in this program i used four functions.
+//void get input get the two integer input form the user. and used the refrence varaible in the paramameter so the value of n1 and n2 can take the memory place of num1 and num2.
+// isSame function is used to see if the two number are the same, if so the program stop.
+//intDivsion function does the division operation of the varaibles, for divding the larger variable to smaller valuewize.
+// the i used a write file function to create a txt file so the number and the result should be writen on that file.
+
+// and in the main function i initialzed the vairables and created the txt file.
