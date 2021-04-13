@@ -6,8 +6,11 @@ int main()
 {
   const  int N=5, M=5;
     int     i, j;
-    for(i=0;i<N;i++) {
-        for(j=i; j<M-i; j++)
+    for(i=0;i<N;i++) { // i= 0,1.2.3 4
+        for(j=i; j<M-i; j++) //i=0,  j = 0, 4
+							// i=1, j = 1, 3
+							// i=2, j = 2, 2
+							// i=3, j 
             cout << " (" << i << "," << j << ") " ;
         cout << endl;
     }

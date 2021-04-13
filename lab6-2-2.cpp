@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 double nthpowerp(int num)
-(
+{
   int i;
   int nthpower = 1;
   int n;
@@ -12,5 +12,4 @@ double nthpowerp(int num)
   }
   cout << "2 " << "^" << num << "= " << nthpower << endl;
   return nthpower;
-
-)
+}
