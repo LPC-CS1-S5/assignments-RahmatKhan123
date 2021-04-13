@@ -11,38 +11,38 @@ void swapTwoValues3(float &, float &);
 
 int main()
 {
-  int n1;
-  float n2;
+  int n1, n2;
+  float f1, f2;
   cout << "input first number: " << endl;
-  cin >> n1;
-  cout << "input the second number: " << endl;
   cin >> n2;
+  cout << "input the second number decimale: " << endl;
+  cin >> f2;
   cout << "now i swapped them for you: " << endl;
 
 
-  swapTwovalues(n1, n2);
+  swapTwoValues(n1 , n2);
 
-  cout << "after swapt: " << n1 << " " << n2 <<. endl;
+  cout << "after swapt: " << n1 << " " << n2 << endl;
 
-  swapTwoValues3(n1, n2);
+  swapTwoValues3(f1 , f2);
 
   cout << "After swap : " << n1 << " " << n2 << endl;
 }
 
-void swapTwoValudes(int &n1, int &n2)
+void swapTwoValudes(int & n1, int & n2)
 {
   int temp;
   temp = n1;
   n1 = n2;
   n2 = temp;
 }
-void swapTwoValues3(float &n1, float &n2)
+void swapTwoValues3(float & f1, float & f2)
 {
   int temp;
-  temp = n1;
-  n1 = n2;
-  n2 = temp;
+  temp = f1;
+  f1 = f2;
+  f2 = temp;
 
-  cout << "in function" << n1 << " " << n2 << endl;
+  cout << "in function" << f1 << " " << f2 << endl;
 }
 
