@@ -37,10 +37,10 @@ void swapTwoValudes(int &n1, int &n2)
 }
 void swapTwoValues3(float &f1, float& f2)
 {
-  float temp;
-  temp = f1;
+  float temp1;
+  temp1 = f1;
   f1 = f2;
-  f2 = temp;
+  f2 = temp1;
 
   cout << "in function" << f1 << " " << f2 << endl;
 }
