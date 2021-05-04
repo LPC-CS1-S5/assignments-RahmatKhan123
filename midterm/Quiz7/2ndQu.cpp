@@ -31,5 +31,6 @@ void printtriangle(int num[][3], int size)
   }
    
 }
+// i had some synntes Error. and notice it, becasue i the the new line statement outside the for loop and wastes so much of my time.
 
 
