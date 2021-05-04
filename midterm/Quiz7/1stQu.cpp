@@ -21,22 +21,41 @@ using namespace std;
 
 const int N = 10;
 
-int checkZero(int []);
-int checkLast(int[]);
+//int checkZero(int []);
+int difference(int []);
+//int checkLast(int[]);
 void printout(int []);
 
 int main()
 {
-  int difference;
-  int Zero;
-  int Last
+  //int difference;
+  //int Zero;
+  //int Last;
   int number[N] = {10, 15, 0, -25, 19, 20, 25, 30, 45, 20};
 
-  Zero = checkZero(number);
-  printout(number);
-  Last = checklast(number);
+  //checkZero(number);
+  //printout(number);
+  //heckLast(number);
+  //printout(number);
+  difference(number);
   printout(number);
 
+}
+int difference(int n[])
+{
+  int different;
+  for (int i = 0; i < 9; i++)
+  {
+    if (i = 0)
+      different == ((n[i] - n[i+1]) < 10));
+    else if ( i = 9)
+      different == (abs(n[i] - n[i-1]) < 10);
+    else (n[i])
+      different == ((((abs(n[i] -  (n[i+1]) > 0 )) || ((abs(n[i]) - (n[i+ 1])) < 10)));
+    
+
+  }
+  return different;
 }
 
 /*[Program Requirements]
@@ -50,15 +69,31 @@ if (abs(n[i] - n[i + 1]) < 10)
 */
 
 
-int checkZero(int n[])
+/*int checkZero(int n[])
 {
-  for (int i = 0; i < 2; i++)
+  int Zero;
+  for (int i = 0; i < N; i++)
   {
-    if ((abs(n[i] == 0 - n[i+1]) <= 10))
-      cout << n[i] << " is less than\t";
+    if ((((abs(n[i] -  n[i+1]) > 0 )) && ((abs(n[i] - n[i+ 1])) < 10)))
+      Zero = n[i];
   }
+  return Zero;
 }
-int chec
+int checkLast(int n[])
+{
+  int last;
+  for (int i = 0; i < N; i++)
+  {
+    if ((abs(n[i = 8] - n[i+1]) <= 10))
+      last = n[i];
+  }
+  return last;
+}
+*/
+
+
+
+
 
 
     
