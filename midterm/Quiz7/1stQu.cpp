@@ -23,6 +23,8 @@ const int N = 10;
 
 //int checkZero(int []);
 int difference(int []);
+int difference1(int []);
+int difference2(int[]);
 //int checkLast(int[]);
 void printout(int []);
 
@@ -34,46 +36,92 @@ int main()
   int number[N] = {10, 15, 0, -25, 19, 20, 25, 30, 45, 20};
 
   //checkZero(number);
-  //printout(number);
+  difference1(number);
+  printout(number);
+  difference2(number);
   //heckLast(number);
-  //printout(number);
+  printout(number);
   difference(number);
   printout(number);
 
 }
 int difference(int n[])
 {
-  int different;
   for (int i = 0; i < N; i++)
   {
     if (i == 0){
-      if(abs(n[i] - n[i+1]) < 10);{
-        cout << "the absolute value of " << n[i] << "minuse " << n[i+1] << "is" << n[i] -n[i] << " equals to less than 10 " << endl;
-        cout << "that is the 1st element: " << endl;
+      if(abs(n[i+1] - n[i]) < 10);{
+        cout << "the absolute value of " << n[i] << " minuse " << n[i+1] << " is " << n[i+1] - n[i] << " equals to less than 10 " << endl;
+        cout << "that is the 1st element difference is: " << n[i+1] - n[i] << endl;
       }
     }
+  }
+
+}
+
+int difference1(int n[])
+{
+  for (int i = 0; i < N; i++)
+  {
+    if ( i == 9)
+    {
+      if(abs(n[i] - n[i-1]) < 10){
+        cout << "the abs of last elemnt minus second to last element " << n[i] - n[i-1] << " is " << n[i] << endl;
+      }
+    }
+    else 
+      return 0;
+  }
+}
+int difference2(int n[])
+{
+  for (int i = 0; i < N; i++)
+  {
+    if ((i > 1) && (i < 8))
+    {
+      if ((abs(n[i] - n[i - 1]) > 0 ) && (abs(n[i] - n[i+1]) < 10))
+      {
+        cout << " the difference except el 1 to 9: is : " << n[i] - n[i-1] << " and " << n[i] - n[i+1] << endl;
+        cout << " the difference from el 1 to 8 is: " << n[i] << endl; 
+      }
+
+    }
+    else 
+      return 0;
+  }
+}
+
+/*
+
     else if ( i == 9)
     {
       if(abs(n[i] - n[i-1]) < 10);{
-        cout << "the abs of last elemnt minus second to last element " << n[i] - n[i-1] << " is " << n[i] << endl;
+        cout << "the abs of last elemnt minus second to last element " << n[i-1] - n[i] << " is " << n[i] << endl;
         cout << "the last element difference is: " << n[i] << endl;
       }
 
     }
-    else if (i == 1)
+    else if (i > 1) 
     {
       if ((abs(n[i] - n[i - 1]) > 0 ) && (abs(n[i] - n[i+1]) < 10))
       {
-        cout << " the difference except el 0 and 9: " << 
+        cout << " the difference except el 1 to 9: is : " << n[i] - n[i-1] << " and " << n[i] - n[i+1] << endl;
+        cout << " the difference from el 1 to 8 is: " << n[i] << endl; 
       }
 
     }
-    else (i = 8)
-      different == ((abs(n[i] - n[i+1]) < 10);
+    
     
 
   }
-  return different;
+}
+*/
+void printout(int n[])
+{
+  for (int i = 0; i < N; i++)
+    cout << n[i];
+  cout << endl;
+  
 }
 
 /*[Program Requirements]
@@ -126,12 +174,5 @@ int checkLast(int n[])
     else 
       return 0;*/
   
-void printout(int n[])
-{
-  for (int i = 0; i < 10; i++)
-    cout << n[i];
-  cout << endl;
-  
-}
 
 
