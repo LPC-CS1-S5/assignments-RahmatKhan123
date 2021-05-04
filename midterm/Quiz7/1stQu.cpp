@@ -44,14 +44,17 @@ int main()
 int difference(int n[])
 {
   int different;
-  for (int i = 0; i < 9; i++)
+  for (int i = 0; i < N; i++)
   {
     if (i = 0)
       different == ((n[i] - n[i+1]) < 10));
     else if ( i = 9)
       different == (abs(n[i] - n[i-1]) < 10);
-    else (n[i])
-      different == ((((abs(n[i] -  (n[i+1]) > 0 )) || ((abs(n[i]) - (n[i+ 1])) < 10)));
+    else if ((i == 1) && (i = 8))
+      different = ((((abs(n[i] - n[i-1]) > 0 )) || ((n[i] - n[i+1]) > 10)))) 
+    else  
+      return n[i]; 
+    
     
 
   }
