@@ -22,7 +22,7 @@ int main()
 
   cout << "Random number 1 to 100 " << getRdnum() << endl;
   cout << "random number 1 to n2: " << getRdnum(n2) << endl;
-  cout << "random number n1+1 to n2: " << getRdnum() << endl;
+  cout << "random number n1+1 to n2: " << getRdnum(n1) << endl;
 }
 
 int getRdnum()
@@ -40,10 +40,15 @@ int getRdnum(int n2)
 int getRdnum(int n1, int n2)
 {
   int num;
-  num = rand() % (n2 - n1 + 1));
+  num = rand() % (n2 - n1 + 1);
 
 }
 //in this function overloading program, i used 3 functions with same name but different parameters.
-//1st function with no parameter generate a random number between 1 to 100.
-// second function with parameter n2, generate a random number from from 1 to n2.
-// 3rd function generate a random number n1 to n2, and in the main function i call all the 3 overloeading functions, and print them out.
+// a function with same name but different parameter is called overloaded function.
+//1st function with no parameter generate one random number between 1 to 100. the rand() % 100 + 1: 
+
+// second function with parameter n2, generate a random number from from 1 to n2. that being done by the rand() % n2 + 1;
+// this operation divide the generated random number by value of n2 and then output the result, which is the number between 1 to n2, n2 = 100, so greater then our 1sr randum number and smaller then n2 which is 100.
+
+// 3rd function generate a random number n1 to n2, that is done by dividing the generated randum number by the difference of n2 and n1;
+// and in the main function i call all the 3 overloeading functions, and print them out.

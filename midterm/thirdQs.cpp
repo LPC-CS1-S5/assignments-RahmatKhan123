@@ -9,14 +9,15 @@ We will skip the first number because there is no preceding number.*/
 using namespace std;
 int getRdnum(void)
 {
-  int rdnum;
   rdnum = rand() % 50;
   for (int i = 0; i < 10; i++)
+  int rdnum;
   {
     rdnum = (rand() % 50) + 1;
     cout << rdnum << endl;
   }
 }
+//in the getRdnum function, by using the built in rand() % 50 generat randum numbers. i use the rdnum variable to save the randum numbers. and used the varaible rdnum that i initialized in main(){} function like rdnum = (rand() % 50 ) + 1 to generate number from 1 to 50;
 int isGreater(int &n)
 {
   static int perc = 0;
@@ -35,6 +36,12 @@ int isGreater(int &n)
     perc = n;
     return(0);
   }
+
+// in the isGreater function i used a refrence varaible n to hold the value of the randum numbers  that initialized at main(){} funciton; 
+// the static int perc = 0 to hold the comparison of the randum numbers we arrange the randum number from smalled to largest from left to right except the first one.
+// the first condtion is if perc = 0, is used to skip the fisrt randum number because there is no perceding number to it to compare it.
+// the second if statement checks if perc < n, by using the refrence varaible we refer to randum numbers checks if the randum number greater then perc then perc = n and return n as true and print out randum number;
+// else statment checks that if perc=n retrun 0
 
 }
 int getRdnum();
@@ -61,6 +68,34 @@ int main()
     }
   }
 }
-// in this program i used one function to generate 10 random number in the range 1 to 50. i used a for loop in this function to generate 10 random number. 
-// then i used another function to check if the number is greater then the perceding number, in this function i used a static varaible to keep the perceding varaible value stable so we can compare to next coming variable. i uesd two if (statement and ) one else to make the comparison.
-//in the main i created the txt.file to the number be writen in to it. then used a while loop to check the random number that are created are 10 of them. by using two varaible i and j.
+
+
+//in the getRdnum function, by using the built in rand() % 50 generat randum numbers. i use the rdnum variable to save the randum numbers. and used the varaible rdnum that i initialized in main(){} function like rdnum = (rand() % 50 ) + 1 to generate number from 1 to 50;
+
+// in the isGreater function i used a refrence varaible n to hold the value of the randum numbers  that initialized at main(){} funciton; 
+// the static int perc = 0 to hold the comparison of the randum numbers we arrange the randum number from smalled to largest from left to right except the first one.
+// the first condtion is if perc = 0, is used to skip the fisrt randum number because there is no perceding number to it to compare it.
+// the second if statement checks if perc < n, by using the refrence varaible we refer to randum numbers checks if the randum number greater then perc then perc = n and return n as true and print out randum number;
+// else statment checks that if perc=n retrun 0
+
+
+//in the main i created the txt.file by using the built in functions for the number be writen in to it. 
+//then used a while loop to check the random number that are created are 10 of them and place rdnum to the function of getRdnum(); by using varaible i I CHEKC to see that 10 random numbers are generated. and placed j = isGreater(); to check if j == 1 means if the random numbers functions is true write it the the file. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

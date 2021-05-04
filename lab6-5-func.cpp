@@ -7,13 +7,13 @@ int main()
   int eversumget(int)
   {
     static int eSum = 0;
-    Esum += Even;
+    esum += Even;
     return Esum;
   }
 
   int oddsumGet(int)
   {
-    static oSum = 0;
+    static int oSum = 0;
     oSum += Odd;
     return oSum;
   }

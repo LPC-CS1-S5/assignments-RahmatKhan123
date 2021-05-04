@@ -37,6 +37,8 @@ int main()
     div = intDivision(num1, num2);
     fileWrite(ofs, div);
   }
+  //i called the function under a while loop condition. for same function if they value are the same the program will terminate by the break; statement.
+  // then div = intDivision checks if the numbers are divisibile lasrger to smalller then write it to the file.
   ofs.close();
 }
 
@@ -82,4 +84,5 @@ void fileWrite (ofstream &ofs, int div)
 //intDivsion function does the division operation of the varaibles, for divding the larger variable to smaller valuewize.
 // the i used a write file function to create a txt file so the number and the result should be writen on that file.
 
-// and in the main function i initialzed the vairables and created the txt file.
+// and in the main function i initialzed the vairables and created the txt file. //i called the function under a while loop condition. for same function if they value are the same the program will terminate by the break; statement.
+  // then div = intDivision checks if the numbers are divisibile lasrger to smalller then write it to the file.

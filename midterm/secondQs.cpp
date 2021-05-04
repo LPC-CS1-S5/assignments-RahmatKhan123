@@ -50,9 +50,9 @@ int main()
   ifs.close();
 
 }
-//i have initialized varaibles one string for students name, one integer for students count, two integers for students score and 3 doublw variables to keep the sum, average and total of the scores.
-//then i used the if.open command to open the text filw for the program to read from.
-//then i used a for loop to count the student and print the students list with their name and their scores. i used the varaible N the keep the count starts from student one and terminta when the cound it 10. because there is 10 total students.
+//i have initialized varaibles one string for students name, one integer for students count, two integers for students score and 3 double variables to keep the sum, average and total of the scores.
+//then i used the if.open command to open the text file for the program to read from.
+//then i used a for loop to count the student and print the students list with their name and their scores. i used the varaible N to keep the count starts from student one and terminta when the cound it 10. because there is 10 total students.
 //then i did the aritmathic operation to get the total, sum and average of each student scores.
 
 // then i used a if(statement to print out the students who has hight average than 80.)
