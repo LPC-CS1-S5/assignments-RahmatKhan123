@@ -21,10 +21,12 @@ int main()
 void printtriangle(int num[][3], int size)
 {
   int triangle;
-  for (int i = 0; i < size-1; i++)
+  for (int i = 0; i < size; i++)
   {
-    for (int j = i; j < size; i++)
-    cout << num[i][j];
+    for (int j = i; j <= i; i++)
+    {
+        cout << num[i][j] << endl;
+    }
   }
   cout << endl;
    
