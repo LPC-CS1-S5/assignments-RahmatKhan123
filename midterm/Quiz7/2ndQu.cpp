@@ -20,10 +20,10 @@ int main()
 }
 void printtriangle(int num[][3], int size)
 {
-  int triangle;
-  for (int i = 0; i < size; i++)
+  
+  for (int i = 0; i < size ; i++)
   {
-    for (int j = i; j <= i; i++)
+    for (int j = 0; j <= i; j++)
     {
         cout << num[i][j] << endl;
     }
