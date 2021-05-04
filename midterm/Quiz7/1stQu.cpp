@@ -66,8 +66,6 @@ int difference1(int n[])
         cout << "the abs of last elemnt minus second to last element " << n[i] - n[i-1] << " is " << n[i] << endl;
       }
     }
-    else 
-      return 0;
   }
 }
 int difference2(int n[])
@@ -83,22 +81,13 @@ int difference2(int n[])
       cout << " the difference from el 1 to 8 is: " << n[i] << endl; 
 
     }
-    else 
-      return 0;
   }
-
-
-
-
-  
 }
-
 void printout(int n[])
 {
   for (int i = 0; i < N; i++)
     cout << n[i];
-  cout << endl;
-  
+  cout << endl; 
 }
 
 

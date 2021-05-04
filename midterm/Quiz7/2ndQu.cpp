@@ -23,7 +23,6 @@ void printtriangle(int num[][3], int size)
   int triangle;
   for (int i = 0; i < size-1; i++)
   {
-    cout << num[i] << endl;
     for (int j = i; j < size; i++)
     cout << num[i][j];
   }
