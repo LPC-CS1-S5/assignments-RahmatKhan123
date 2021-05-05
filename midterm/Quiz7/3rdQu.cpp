@@ -31,18 +31,18 @@ int findmax(int num[], int from, int to)
   
     for ( int i = 0; i <N/2-1;i++)
     {
-      if (num[i] > firstmax)
+      if (num[i] < firstmax)
       {
         firstmax = num[i];
       }
+      cout << firstmax << endl;
       for (int i = N/2-1; i < N; i++)
       {
-        if ( num[i] > secondmax)
+        if ( num[i] < secondmax)
         {
           secondmax = num[i];
         }
+        cout << secondmax << endl;
       }
     }
-  return firstmax;
-  return secondmax;
 }

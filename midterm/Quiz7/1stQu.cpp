@@ -67,6 +67,7 @@ int difference1(int n[])
       }
     }
   }
+  cout << "the result is: " << n[i] << endl;
 }
 int difference2(int n[])
 {
