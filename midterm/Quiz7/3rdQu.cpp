@@ -15,20 +15,47 @@ const int N = 10;
 int main()
 {
   int number[N] = {10, 15, 0, -25, 19, 20, 25, 30, 45, 20};
+  int from = 10;
+  int to num[i] ;
   
   findmax(number, from, to);
 }
-int findmax(int num[], int from, int end)
+//Let’s assume that we have an array “number” which has the size //N=10. Make the program that finds the greatest number between //number[0] and number[N/2 - 1] and also between number[N/2] to //number[N-1].
+
+int findmax(int num[], int from, int to)
 {
+  
+  int begin = 10;
+  int end = num[N/2-1];
   int firstmax = 0;
   int secondmax = 0;
-  int mid = N/2;
-  
-  for (int i = 0; i < from; i++)
+  for (int i = 0; i < N; i++)
   {
-    firstmax = num[i];
-    for (int i = from; i < N; i++)
-      secondmax = num[i];
+    if (i < end)
+    {
+      firstmax > num[i];
+    }
+    else if ((i > end ) && (i < N))
+    {
+      secondmax > num[1];
+    }
+    cout << firstmax << secondmax << endl;
   }
-  cout << firstmax << " and " << secondmax << endl;
+  
+  
+  /*for (int i = begin; i < end; i++)
+  {
+    if (num[i] > firstmax)
+    {
+      firstmax = num[i];
+    }
+  }
+  cout << firstmax << endl;
+  for (int i = end; i < N; i++){
+    if (num[i] > secondmax)
+    {
+      secondmax = num[i];
+    }
+  }
+  cout << secondmax << endl;*/
 }
