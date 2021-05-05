@@ -26,8 +26,8 @@ int main()
 
 int findmax(int num[], int from, int to)
 {
-  int firstmax = num[0];
-  int secondmax = num[0];
+  int firstmax;
+  int secondmax;
   
     for ( int i = 0; i <N/2-1;i++)
     {
