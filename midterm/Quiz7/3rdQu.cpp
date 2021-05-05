@@ -26,23 +26,23 @@ int main()
 
 int findmax(int num[], int from, int to)
 {
-  int firstmax = 0;
-  int secondmax = 0;
+  int firstmax = num[0];
+  int secondmax = num[0];
   
     for ( int i = 0; i <N/2-1;i++)
     {
-      if (num[i] > firstmax)
+      for (int i = N/2-1; i < N; i++)
       {
-        firstmax = num[i];
+        if (num[i] > firstmax)
+        {
+          firstmax = num[i];
+        }
+        else if ( num[i] > secondmax)
+        {
+          secondmax = num[i];
+        }
       }
     }
-    for (int i = N/2-1; i < N; i++)
-    {
-      if (num[i] > secondmax)
-      {
-        secondmax = num[i];
-      }
-    }
- 
-  cout << firstmax << secondmax << endl;
+  return firstmax;
+  return secondmax;
 }
