@@ -50,9 +50,9 @@ void deleteone(vector<int> &vec)
     iter = find(vec.begin(), vec.end(), usernum);
     if (iter != vec.end())
       vec.erase(iter);
-  }
-  deletecnt ++;
+    deletecnt ++;
 
+  }
   cout << usernum << "is deleted " << deletecnt << " times \n";
 	printvector(vec);
 	

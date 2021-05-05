@@ -31,13 +31,13 @@ int findmax(int num[], int from, int to)
   
     for ( int i = 0; i <N/2-1;i++)
     {
+      if (num[i] > firstmax)
+      {
+        firstmax = num[i];
+      }
       for (int i = N/2-1; i < N; i++)
       {
-        if (num[i] > firstmax)
-        {
-          firstmax = num[i];
-        }
-        else if ( num[i] > secondmax)
+        if ( num[i] > secondmax)
         {
           secondmax = num[i];
         }
