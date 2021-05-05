@@ -47,9 +47,13 @@ void deleteone(vector<int> &vec)
     {
       vec.insert(iter, usernum);
     }
-    iter = find(vec.begin(), vec.end(), usernum);
-    if (iter == usernum)
-      vec.erase(iter);
+
+    else if (iter = find(vec.begin(), vec.end(), usernum))
+    {
+      if (iter == usernum)
+        vec.erase(iter);
+
+    }
     deletecnt ++;
 
   }
