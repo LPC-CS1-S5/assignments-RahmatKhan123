@@ -42,7 +42,12 @@ void deleteone(vector<int> &vec)
   cin >> usernum;
   for(auto i = begin(vec); i  != end(vec); i++)
   {
-    if (v.begin(), v.end(), usernum)
+    if (vec.begin(), vec.end(), usernum)
+    {
+      vec.erase(vec.begin(), + usernum));
+      cout << *i << endl;
+    }
+    deletecnt++;
   }
 
   cout << usernum << "is deleted " << deletecnt << " times \n";
