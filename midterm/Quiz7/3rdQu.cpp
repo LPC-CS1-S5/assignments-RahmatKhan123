@@ -15,21 +15,20 @@ const int N = 10;
 int main()
 {
   int number[N] = {10, 15, 0, -25, 19, 20, 25, 30, 45, 20};
-  findmax(number, feof, feof);
+  
+  findmax(number, from, to);
 }
-int findmax(int num[], int from, int to)
+int findmax(int num[], int from, int end)
 {
+  int firstmax = 0;
+  int secondmax = 0;
   int mid = N/2;
-  int firstmax;
-  int secondmax;
-  for (int i = 0; i < mid; i++)
+  
+  for (int i = 0; i < from; i++)
   {
     firstmax = num[i];
-  }
-
-  for (int j = mid; j < N; j++)
-  {
-    secondmax = num[j];
+    for (int i = from; i < N; i++)
+      secondmax = num[i];
   }
   cout << firstmax << " and " << secondmax << endl;
 }
