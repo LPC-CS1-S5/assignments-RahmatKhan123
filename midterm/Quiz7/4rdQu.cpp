@@ -40,18 +40,21 @@ void deleteone(vector<int> &vec)
   int usernum, deletecnt=0;
   cout << "Please Input a number: " << endl;
   cin >> usernum;
-  for(auto i = begin(vec); i  != end(vec); i++)
+  vector<int>::iterator iter;
+  for (iter = vec.begin(); iter != vec.end(); iter++)
   {
-    if (vec.begin(), vec.end(), usernum)
+    if (usernum == *iter)
     {
-      vec.erase(vec.begin(), + usernum));
-      cout << *i << endl;
+      vec.insert(iter, usernum);
     }
-    deletecnt++;
+    iter = find(vec.begin(), vec.end(), usernum);
+    if (iter != vec.end())
+      vec.erase(iter);
   }
+  deletecnt ++;
 
   cout << usernum << "is deleted " << deletecnt << " times \n";
-	printvector(vec)
+	printvector(vec);
 	
 }
 
