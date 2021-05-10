@@ -21,31 +21,57 @@ Elaboration on algorithms and program design: 3pts
 using namespace std;
 int main()
 {
-  ifstream ifso;
-  string substring = "th";
-  ifso.open("python.txt");
-
-  string x; // declarring the variable to save "th" extract from substring.
-
-  bool ans = false;
-  int line =1;
-
-  if ("python.txt" is_open())
+  int cnt=0;
+  string str1 = "th";
+  string substring;
+  string line;
+  ifstream filename("python.txt");
+  if (filename.is_open())
   {
-    while ( (getline ("python.txt", x) )
+    while(getline(filename, line))
     {
-      if (x.find(substring, 0) != string::npos)
+      cout <<  line  << endl;
+    }
+
+
+    if ((str1 =line.length)
+    {
+      cnt+=1;
+    }
+    cout << cnt << endl;
+  }
+  else 
+  {
+    cout << "file open successful: " << endl;
+  }
+  cin.get();
+  cin.get();
+  /*string substring = "th";
+  char filename[] = ifso.open("python.txt");
+  if (ifso.fail)
+  {
+    cout << "Filed to open file %s " << filename << endl;
+
+  
+    while ( (getline ("python.txt") )
+    {
+      if ((find(substring, 0) == filename ))
       {
         cout << "substring prensent at line: " << line << endl;
-        ans = true;
       }
       line++;
     }
   }
+
+  //string x; // declarring the variable to save "th" extract from substring.
+
+  //bool ans = false;
+  //int line =1;
+
   else 
     cout << "Unable to open file: " << endl;
   if (!ans)
   cout << "substring not present : " << endl;
 
-  return 0;
+  return 0;*/
 }
