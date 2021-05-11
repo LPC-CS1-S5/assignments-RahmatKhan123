@@ -14,31 +14,41 @@ The program asks for the user email string and then split the id, organization n
 using namespace std;
 bool emailcheck(char []);
 bool domaincheck(char[]);
-int splitemail(const char[], char[][100], char)
 
 int main()
 {
+  char email[15];
+  cout << "Enter yout email: " << endl;
+  cin >> email;
+
+  if(emailcheck(email))
+    cout << "Email Check passed: " << endl;
+  if (domaincheck(email))
+    cout << "Domain Check Passed: " << endl;
 
 
 }
 //The id of the email must be starting with the alphabet characters
 ////The length of id must be greater than 5 and less than 15
-bool emailcheck(char email[]);
+bool emailcheck(char email[])
 {
   char emaillen = 15;
-  
-  int i = 0;
-  if (!isalpha(email[0]))
-    return false;
-  else 
-    cout << "Your email must start with alphabet: \n";
-    return true;
-  if ((email[i] < 5) || ( email[i] > 15))
+  char len = emaillen;
+  for (int i = 0; i < len; i++)
   {
-    return false;
+    if (!isalpha(email[0]))
+      return false;
+    else 
+      cout << "Your email must start with alphabet: \n";
+      return true;
+    if ((email[i] < 5) || ( email[i] > 15))
+    {
+      return false;
+    }
+    else 
+      return true;
+
   }
-  else 
-    return true;
 }
 //The domain name should be one of the list {com, org, edu, net, and gov
 bool domaincheck(char email[])
@@ -53,13 +63,33 @@ bool domaincheck(char email[])
     if(email[i] == '.')
       break;
   }while(i-- > 0);
-  res = strstr(domian, email+i+1);
+  res = strstr(domain, email+i+1);
   if (res)
     return true;
   else 
     return false;
 }
+
+
+
+
+
+
+
+
 //The program asks for the user email string and then split the id, organization name, and domain name. After that, check the validity of the email string base on the above requirements.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*int emailSplit(const char email[], char dest[][100], char delimiter)
@@ -80,7 +110,7 @@ bool domaincheck(char email[])
 	return cnt+1;
 }
 
-
+*/
 
 
 
