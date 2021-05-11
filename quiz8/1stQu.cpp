@@ -39,28 +39,20 @@ int main()
     {
       int len;
       len = strlen(readline);
-      for (int i = 0 ; i< len; i++)
+      if (occurrence(readline, word))
       {
-        if(isupper(readline[i]))
-        {
-          readline[i] = tolower(readline[i]);
-        }
-      if (occurance(readline, word))
-      {
-        cout << readline << " : is : " << word << endl;
+        cout << readline << " : is : " << word << " : " << count << endl;
         count++;
       }
     }
   }
-  cout << "the number is " << count << " of : ths : " << endl
+  cout << "the number is " << count << " of : ths : " << endl;
 }
-bool occurance(char readline[], char word[])
+bool occurrence(char readline[], char word[])
 {
   char *pos;
-  pso = (strstr(readline, word));
+  pos = (strstr(readline, word));
   if(pos)
-  {
     return true;
-  }
   
 }
