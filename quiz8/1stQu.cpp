@@ -21,20 +21,25 @@ Elaboration on algorithms and program design: 3pts
 using namespace std;
 int main()
 {
-  ifstream file;
-  int cnt = 0;
-  char th[] = "th";
-  ifs.open("python.txt")
-  if(ifs)
+  fstream ifs;
+  int cnt, start, numth;
+  char include[100];
+  ifs.open("python.txt");
+  if(!ifs)
   {
-    while(ifs>>(char th[]))
+    cout << "File Open Error!: " << endl;
+    exit(0);
+    while(ifs >> include)
     {
-      if(strcmp("python.txt", th[]) == true)
+      int start = 0;
+      cnt = 0;
+      while( (numth = "python.txt".find("th", start)) != string::npos)
       {
+        include = "python.txt".substr(start,"th");
         cout << " th : found in file: " << endl;
+        cnt +=1;
       }
-      cnt +=1;
     }
   }
-  file.close();
+  ifs.close();
 }
