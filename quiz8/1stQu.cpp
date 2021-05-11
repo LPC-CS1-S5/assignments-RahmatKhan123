@@ -17,29 +17,36 @@ Elaboration on algorithms and program design: 3pts
 */
 #include <iostream>
 #include <string>
+#include <cstring>
+#include <cctype>
 #include <fstream>
 using namespace std;
 int main()
 {
   fstream ifs;
-  int cnt, start, numth;
-  char include[100];
   ifs.open("python.txt");
   if(!ifs)
   {
     cout << "File Open Error!: " << endl;
     exit(0);
-    while(ifs >> include)
-    {
-      int start = 0;
-      cnt = 0;
-      while( (numth = "python.txt".find("th", start)) != string::npos)
-      {
-        include = "python.txt".substr(start,"th");
-        cout << " th : found in file: " << endl;
-        cnt +=1;
-      }
-    }
   }
+  int count = 0;
+  //char th;
+  string word;
+  while(ifs >> word)
+  {
+    //char start;
+    //int wordcount = 0;
+    //if( (wordcount.find(th) == wordcount.end())
+    //{
+    //wordcount[th] +=1;
+    //}
+    //ifs.getline(th);
+    //cout << th;
+    cout << " th " << th << "has " << th.length() << " has" << th << endl;
+    count++;
+  }
+  //cout << " the number of : th : is : " << count << endl;
+  
   ifs.close();
 }
