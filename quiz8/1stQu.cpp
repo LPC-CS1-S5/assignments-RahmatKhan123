@@ -16,37 +16,51 @@ Program Correctness: 7 pts
 Elaboration on algorithms and program design: 3pts
 */
 #include <iostream>
-#include <string>
 #include <cstring>
 #include <cctype>
 #include <fstream>
 using namespace std;
+bool occurrence( char[], char[]);
 int main()
 {
+  char word[10] = "th";
+  char readline[22];
   fstream ifs;
+  int count;
   ifs.open("python.txt");
   if(!ifs)
   {
     cout << "File Open Error!: " << endl;
     exit(0);
   }
-  int count = 0;
-  //char th;
-  string word;
-  while(ifs >> word)
+  if(ifs)
   {
-    //char start;
-    //int wordcount = 0;
-    //if( (wordcount.find(th) == wordcount.end())
-    //{
-    //wordcount[th] +=1;
-    //}
-    //ifs.getline(th);
-    //cout << th;
-    cout << " th " << th << "has " << th.length() << " has" << th << endl;
-    count++;
+    while(ifs >> readline)
+    {
+      int len;
+      len = strlen(readline);
+      for (int i = 0 ; i< len; i++)
+      {
+        if(isupper(readline[i]))
+        {
+          readline[i] = tolower(readline[i]);
+        }
+      if (occurance(readline, word))
+      {
+        cout << readline << " : is : " << word << endl;
+        count++;
+      }
+    }
   }
-  //cout << " the number of : th : is : " << count << endl;
+  cout << "the number is " << count << " of : ths : " << endl
+}
+bool occurance(char readline[], char word[])
+{
+  char *pos;
+  pso = (strstr(readline, word));
+  if(pos)
+  {
+    return true;
+  }
   
-  ifs.close();
 }
