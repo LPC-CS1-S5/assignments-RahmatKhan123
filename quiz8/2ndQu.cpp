@@ -25,8 +25,6 @@ int main()
     cout << "Email Check passed: " << endl;
   if (domaincheck(email))
     cout << "Domain Check Passed: " << endl;
-
-
 }
 //The id of the email must be starting with the alphabet characters
 ////The length of id must be greater than 5 and less than 15
@@ -47,7 +45,6 @@ bool emailcheck(char email[])
     }
     else 
       return true;
-
   }
 }
 //The domain name should be one of the list {com, org, edu, net, and gov
@@ -69,51 +66,3 @@ bool domaincheck(char email[])
   else 
     return false;
 }
-
-
-
-
-
-
-
-
-//The program asks for the user email string and then split the id, organization name, and domain name. After that, check the validity of the email string base on the above requirements.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*int emailSplit(const char email[], char dest[][100], char delimiter)
-{
-	int i=0, j=0, cnt=0;
-	while( email[i] != '\0'){ 
-		dest[cnt][j++] = source[i] ;
-		if ( source[i] == delimiter){
-			dest[cnt][j-1] = '\0';
-			cnt++;
-			j = 0;
-		}
-		i++;
-	}
-	dest[cnt][j] = '\0';
-	if ( j==0)
-		cnt--;
-	return cnt+1;
-}
-
-*/
-
-
-
-
-
-	

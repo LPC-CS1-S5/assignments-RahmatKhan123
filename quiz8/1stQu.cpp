@@ -17,7 +17,6 @@ Elaboration on algorithms and program design: 3pts
 */
 #include <iostream>
 #include <cstring>
-#include <cctype>
 #include <fstream>
 using namespace std;
 bool occurrence( char[], char[]);
