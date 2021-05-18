@@ -112,11 +112,43 @@ string getsalary(stirng str)
 {
   int startpos, pos, endpos;
   startpos = 0;
+  int salary;
   int salarylen = 6;
   for (int i =0 ; i < 6; i++)
   {
-
+    pos = str.find( " ", startpos);
+    startpos = pos+1;
   }
+  salary = stoi(str.substr(pos+1, salarylen));
+  return salary;
+}
+strin getdpt(string str)
+{
+  int startpos, pos, endpos;
+  startpos = 0;
+  
+  int deptlen = 8;
+  for (int i = 0; i < 8; i++)
+  {
+    pos = str.find( " ", startpos);
+    startpos = pos+1;
+  }
+  endpos = str.find( " ", startpos);
+  retrun str.substr(startpos, endpos-startpos);
+}
+string getdate(string str)
+{
+  int startpos, pos, endpos;
+  startpos = 0;
+  int datelent = 10;
+  int date;
+  for (int i = 0; i < 10; i++)
+  {
+    pos = str.find( " ", startpos);
+    startpos = pos+1;
+  }
+  date = stoi(str.substr(pos+1, datelen));
+  return date;
 }
 
 
