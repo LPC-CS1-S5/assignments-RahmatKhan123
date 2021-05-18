@@ -82,7 +82,17 @@ void printresult(emprecord ep[], int foundresult)
 
 string getid(string str)
 {
-  return str.substr(0,5);
+  int startpos, pos;
+  int idlen = 6;
+  int id;
+  startpos = 0;
+  for (int i =0; i < idlen; i++)
+  {
+    pos = str.find(i[0], startpos);
+    startpos = pos+1;
+  }
+  id = stoi(str.substr(pos+1, idlen));
+  return id;
 }
 
 string getempname(string str)
@@ -97,6 +107,16 @@ string getempname(string str)
   }
   endpos = str.find( " " ,startpos);
   return str.substr(startpos, endpos-startpos);
+}
+string getsalary(stirng str)
+{
+  int startpos, pos, endpos;
+  startpos = 0;
+  int salarylen = 6;
+  for (int i =0 ; i < 6; i++)
+  {
+
+  }
 }
 
 
