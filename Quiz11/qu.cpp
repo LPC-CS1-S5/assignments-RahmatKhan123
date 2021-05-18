@@ -14,6 +14,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 const int size = 2000;
@@ -27,16 +28,22 @@ struct emprecord
   int date;
 };
 
-int main()
-{
-  int empresult;
-  emprecord emp[size];
-}
+int employeerecord(emprecord emp[]);
+void printresult(emprecord emp[], int foundresult);
 string getid(string);
 string getempname(string);
 string getsalary(string);
 string getdpt(string);
 string getdate(string);
+int main()
+{
+  int empresult = 0;
+  emprecord emp[size];
+
+  empresult = employeerecord(emp);
+  printresult(emp,foundresult);
+}
+
 //[3] Make a function that constructs the structure employee.
 //in this function we are going to  read all lines and then, construct the structure array to store them.
 int employeerecord(emprecord ep[])
@@ -51,7 +58,7 @@ int employeerecord(emprecord ep[])
     cout << "File open Error: \n";
     exit(0);
   }
-  while(ifso >> readline) && (cnt < 2000)
+  while((ifso >> readline) && (cnt < 2000))
   {
     ep[cnt].id = getid(readline);
     ep[cnt].empname = getempname(readline);
@@ -68,15 +75,15 @@ int employeerecord(emprecord ep[])
 // find the employee that as a salary greater than 100,000
 //find the employee that works in the Computer Department.
 
-void printresult(emprecord ep[], int foundresult)
+void printresult(emprecord emp[], int result)
 {
-  for (int i = 0; i < emprecord; i++)
+  for (int i = 0; i < result; i++)
   {
-    cout << setw(5) << ep[i].id << "\t";
-    cout << setw(5) << ep[i].empname << "\t";
-    cout << setw(5) << ep[i].salary << "\t";
-    cout << setw(5) << ep[i].dpt << "\t";
-    cout << setw(5) << ep[i].date << "\t";
+    cout << setw(5) << emp[i].id << "\t";
+    cout << setw(5) << emp[i].empname << "\t";
+    cout << setw(5) << emp[i].salary << "\t";
+    cout << setw(5) << emp[i].dpt << "\t";
+    cout << setw(5) << emp[i].date << "\t";
   }
 }
 
@@ -88,7 +95,7 @@ string getid(string str)
   startpos = 0;
   for (int i =0; i < idlen; i++)
   {
-    pos = str.find(i[0], startpos);
+    pos = str.find(" ", startpos);
     startpos = pos+1;
   }
   id = stoi(str.substr(pos+1, idlen));
@@ -99,7 +106,7 @@ string getempname(string str)
 {
   int startpos, pos, endpos;
   startpos = 0;
-  len = empname;
+  len = 10;
   for (int i = 0; i < len; i++)
   {
     pos = str.find( " " ,startpos);
@@ -122,7 +129,7 @@ string getsalary(stirng str)
   salary = stoi(str.substr(pos+1, salarylen));
   return salary;
 }
-strin getdpt(string str)
+string getdpt(string str)
 {
   int startpos, pos, endpos;
   startpos = 0;
@@ -140,7 +147,7 @@ string getdate(string str)
 {
   int startpos, pos, endpos;
   startpos = 0;
-  int datelent = 10;
+  int datelen = 10;
   int date;
   for (int i = 0; i < 10; i++)
   {
