@@ -94,13 +94,16 @@ string getid(string str)
   int startpos, pos;
   int idlen = 6;
   int id;
+  string str;
   startpos = 0;
   for (int i =0; i < idlen; i++)
   {
     pos = str.find(" ", startpos);
     startpos = pos+1;
   }
-  id = stoi(str.substr(pos+1, idlen));
+  str = to_string(id);
+
+  //id = stoi(str.substr(pos+1, idlen));
   return id;
 }
 
@@ -122,17 +125,24 @@ string getsalary(string str)
   int startpos, pos, endpos;
   startpos = 0;
   int salary;
+  string str;
   int salarylen = 6;
   for (int i =0 ; i < 6; i++)
   {
     pos = str.find( " ", startpos);
     startpos = pos+1;
   }
-  salary = stoi(str.substr(pos+1, salarylen));
+  str = to_string(salary);
+  //salary = stoi(str.substr(pos+1, salarylen));
+  if(salary > 100)
+  {
+    cout << "this salary is the biggest: " << salary << endl;
+  }
   return salary;
 }
 string getdpt(string str)
 {
+  string dpt = computer;
   int startpos, pos, endpos;
   startpos = 0;
   
@@ -143,6 +153,10 @@ string getdpt(string str)
     startpos = pos+1;
   }
   endpos = str.find( " ", startpos);
+  if (dpt = computer)
+  {
+    cout << "the compuer department is: " << endl;
+  }
   return str.substr(startpos, endpos-startpos);
 }
 string getdate(string str)
@@ -151,12 +165,14 @@ string getdate(string str)
   startpos = 0;
   int datelen = 10;
   int date;
+  string str
   for (int i = 0; i < 10; i++)
   {
     pos = str.find( " ", startpos);
     startpos = pos+1;
   }
-  date = stoi(str.substr(pos+1, datelen));
+  str = to_string(date);
+  //date = stoi(str.substr(pos+1, datelen));
   return date;
 }
 
