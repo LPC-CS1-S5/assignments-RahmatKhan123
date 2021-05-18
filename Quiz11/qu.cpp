@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <string>
 #include <iomanip>
 using namespace std;
@@ -29,7 +30,7 @@ struct emprecord
 };
 
 int employeerecord(emprecord emp[]);
-void printresult(emprecord emp[], int foundresult);
+void printresult(emprecord emp[], int result);
 string getid(string);
 string getempname(string);
 string getsalary(string);
@@ -38,15 +39,16 @@ string getdate(string);
 int main()
 {
   int empresult = 0;
+  int result = 0;
   emprecord emp[size];
 
   empresult = employeerecord(emp);
-  printresult(emp,foundresult);
+  printresult(emp,result);
 }
 
 //[3] Make a function that constructs the structure employee.
 //in this function we are going to  read all lines and then, construct the structure array to store them.
-int employeerecord(emprecord ep[])
+int employeerecord(emprecord emp[])
 {
   int cnt = 0;
   string readline;
@@ -60,11 +62,11 @@ int employeerecord(emprecord ep[])
   }
   while((ifso >> readline) && (cnt < 2000))
   {
-    ep[cnt].id = getid(readline);
-    ep[cnt].empname = getempname(readline);
-    ep[cnt].salary = getsalary(readline);
-    ep[cnt].dpt = getdpt(readline);
-    ep[cnt].date = getdate(readline);
+    emp[cnt].id = getid(readline);
+    emp[cnt].empname = getempname(readline);
+    emp[cnt].salary = getsalary(readline);
+    emp[cnt].dpt = getdpt(readline);
+    emp[cnt].date = getdate(readline);
     cnt++;
   }
   return cnt;
@@ -106,7 +108,7 @@ string getempname(string str)
 {
   int startpos, pos, endpos;
   startpos = 0;
-  len = 10;
+  int len = 10;
   for (int i = 0; i < len; i++)
   {
     pos = str.find( " " ,startpos);
@@ -115,7 +117,7 @@ string getempname(string str)
   endpos = str.find( " " ,startpos);
   return str.substr(startpos, endpos-startpos);
 }
-string getsalary(stirng str)
+string getsalary(string str)
 {
   int startpos, pos, endpos;
   startpos = 0;
@@ -141,7 +143,7 @@ string getdpt(string str)
     startpos = pos+1;
   }
   endpos = str.find( " ", startpos);
-  retrun str.substr(startpos, endpos-startpos);
+  return str.substr(startpos, endpos-startpos);
 }
 string getdate(string str)
 {
