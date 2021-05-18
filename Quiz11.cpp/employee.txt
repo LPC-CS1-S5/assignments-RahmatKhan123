@@ -1,0 +1,11 @@
+121314 John Doe 140000 Computer Jan 31 2020
+121112 Ali John 150000 Cumputer Jan 12 2020
+111213 Micheal John 160000 Human Resource Jan 11 2020
+141213 Khan John 170000 Computer Jan 15 2020
+151214 Ally Mike 120000 Human Resource Jan 1 2021
+123445 Mary John 122000 IT Jan 2 2021
+198760 Mike Micheal 100000 Payroll Jan 20 2020
+453421 Khan Rahmat 150000 Computer Dec 20 2021
+123343 Stepahny Young 145000 Computer Dec 30 2020
+123456 Andrew Young 143000 IT Jan 9 2021
+567890 Lopu John 120000 Payroll Jan 2 2021
