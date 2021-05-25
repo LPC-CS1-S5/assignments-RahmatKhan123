@@ -22,7 +22,7 @@ int main()
                                      {8, 8, 7, 8, 9},
                                      {1, 2, 1, 2, 3}};
   findMaxSum(result, numbers, NUM_ROWS, NUM_COLS);
-  cout << "The row values are: ";
+  cout << " The row values are: ";
   for (int i = 0; i < NUM_COLS; i++)
     cout << setw(5) << result[i];
   cout << endl;
@@ -31,7 +31,7 @@ int main()
 void findMaxSum(int result[], int num[][5], int rows, int cols)
 {
   int sumrow = 0;
-  // sum = 0,
+  //sum = 0,
   int idx;
   for (int i = 0; i < rows; i++)
   {
@@ -39,14 +39,16 @@ void findMaxSum(int result[], int num[][5], int rows, int cols)
     for (int j = 0; j < cols; j++)
     {
       cout << setw(5) << num[i][j];
-      sum = sum + num[i][j];
+      sum += result[i] + num[i][j];
     }
-    if(i == 0)
-      sum = sumrow;
-    else if ( sumrow > sum)
+    if(sumrow < sum || i == 0)
+    {
       sumrow = sum;
-    idx = i;
-  }
-  for (int i = 0; i < cols; i++)
-    result[i] = num[idx][i];
+      //else if ( sumrow > sum)
+        //sumrow = sum;
+      idx = i;
+    }
+    for (int j = 0; j < cols; j++)
+      result[j] = num[idx][j];
+    }
 }
