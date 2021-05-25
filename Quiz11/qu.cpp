@@ -11,172 +11,110 @@
 // the textfile "employee.txt" contains the indiviual personal information for the structure employee.
 //Each line contains all data for an employee structure that has been created in[1] for example. 123456 John Doe 140000 Computer Jan 21 2020.
 
+const int size = 2000;
 #include <iostream>
 #include <fstream>
-#include <sstream>
-#include <string>
-#include <iomanip>
 using namespace std;
 
-const int size = 2000;
-const char numname=2;
-struct emprecord
-{
+
+struct employee{
   int id;
-  string empname[numname];
+  string name;
+  string lname;
   int salary;
   string dpt;
-  int date;
+  string month;
+  int day;
+  int year;
 };
 
-int employeerecord(emprecord emp[]);
-void printresult(emprecord emp[], int result);
-string getid(string);
-string getempname(string);
-string getsalary(string);
-string getdpt(string);
-string getdate(string);
+//[2] Create text file for the employee information
+// the textfile "employee.txt" contains the indiviual personal information for the structure employee.
+int makestructarray(employee[]);
+
+
+//i am going to make a function that find a particular employee with some condition.
+// finding an employee that has a salary greater then 100000.
+void largesalaryemp(employee[], int);
+
+
+//finding the employee that work in computer department.
+void findcomputer(employee[], int);
+void printresult(employee [],emp);
+
+
 int main()
 {
-  int empresult = 0;
-  int result = 0;
-  emprecord emp[size];
+  employee emp[size];
+  int numofemployee = 0;
 
-  empresult = employeerecord(emp);
-  printresult(emp,result);
+  numofemployee = makestructarray(emp);
+  cout << "There are " << numofemployee << "employees. " << endl;
+
+  cout << "the Employee or employees with salary more then 100000 are: " << endl;
+  largesalaryemp(emp, numofemployee);
+
+  cout << "the number of employee works in computer department are" << endl;
+  findcomputer(emp, numofemployee);
+  //void printresult(employee emp);
 }
+
 
 //[3] Make a function that constructs the structure employee.
 //in this function we are going to  read all lines and then, construct the structure array to store them.
-int employeerecord(emprecord emp[])
+int makestructarray(employee emp[])
 {
-  int cnt = 0;
-  string readline;
-  ifstream ifso;
-
-  ifso.open("employee.txt");
-  if(!ifso)
+  ifstream ifs;
+  int i;
+  ifs.open("employee.txt");
+  if(!ifs)
   {
     cout << "File open Error: \n";
     exit(0);
   }
-  while((ifso >> readline) && (cnt < 2000))
+  if(ifs)
   {
-    emp[cnt].id = getid(readline);
-    emp[cnt].empname = getempname(readline);
-    emp[cnt].salary = getsalary(readline);
-    emp[cnt].dpt = getdpt(readline);
-    emp[cnt].date = getdate(readline);
-    cnt++;
+    int i = 0;
+     while (ifs >> emp[i].id >> emp[i].name >> emp[i]lname >> emp[i].salary >> emp[i].dpt >> >> emp[i].month >> emp[i].day >> emp[i].year)
+     {
+       i++
+     }
+     return i;
   }
-  return cnt;
-}
-
-//[4] Make function that find the particular employee with some conditions
-
-// find the employee that as a salary greater than 100,000
-//find the employee that works in the Computer Department.
-
-void printresult(emprecord emp[], int result)
-{
-  for (int i = 0; i < result; i++)
-  {
-    cout << setw(5) << emp[i].id << "\t";
-    cout << setw(5) << emp[i].empname << "\t";
-    cout << setw(5) << emp[i].salary << "\t";
-    cout << setw(5) << emp[i].dpt << "\t";
-    cout << setw(5) << emp[i].date << "\t";
-  }
-}
-
-string getid(string str)
-{
-  int startpos, pos;
-  int idlen = 6;
-  int id;
-  string str;
-  startpos = 0;
-  for (int i =0; i < idlen; i++)
-  {
-    pos = str.find(" ", startpos);
-    startpos = pos+1;
-  }
-  str = to_string(id);
-
-  //id = stoi(str.substr(pos+1, idlen));
-  return id;
-}
-
-string getempname(string str)
-{
-  int startpos, pos, endpos;
-  startpos = 0;
-  int len = 10;
-  for (int i = 0; i < len; i++)
-  {
-    pos = str.find( " " ,startpos);
-    startpos = pos+1;
-  }
-  endpos = str.find( " " ,startpos);
-  return str.substr(startpos, endpos-startpos);
-}
-string getsalary(string str)
-{
-  int startpos, pos, endpos;
-  startpos = 0;
-  int salary;
-  string str;
-  int salarylen = 6;
-  for (int i =0 ; i < 6; i++)
-  {
-    pos = str.find( " ", startpos);
-    startpos = pos+1;
-  }
-  str = to_string(salary);
-  //salary = stoi(str.substr(pos+1, salarylen));
-  if(salary > 100)
-  {
-    cout << "this salary is the biggest: " << salary << endl;
-  }
-  return salary;
-}
-string getdpt(string str)
-{
-  string dpt = computer;
-  int startpos, pos, endpos;
-  startpos = 0;
   
-  int deptlen = 8;
-  for (int i = 0; i < 8; i++)
-  {
-    pos = str.find( " ", startpos);
-    startpos = pos+1;
-  }
-  endpos = str.find( " ", startpos);
-  if (dpt = computer)
-  {
-    cout << "the compuer department is: " << endl;
-  }
-  return str.substr(startpos, endpos-startpos);
 }
-string getdate(string str)
+// this function is for salary greater then 100000
+void largesalaryemp(employee emp[], int numofemployee)
 {
-  int startpos, pos, endpos;
-  startpos = 0;
-  int datelen = 10;
-  int date;
-  string str
-  for (int i = 0; i < 10; i++)
+  for (int i = 0; i < numofemployee; i++)
   {
-    pos = str.find( " ", startpos);
-    startpos = pos+1;
+    if( emp[i].salary > 100000)
+    {
+      printresult(emp[i]);
+    }
   }
-  str = to_string(date);
-  //date = stoi(str.substr(pos+1, datelen));
-  return date;
 }
 
+void findcomputer(employee emp[], int numofemployee)
+{
+  for (int i = 0; i < numofemployee; i++)
+  {
+    if (emp[i].dpt == "Computer")
+    {
+      printresult(emp[i]);
+    }
+  }
+}
 
-//[5] Make the main function that drives your functions.
-// the main function should be developed to drive all your function.
-// all other assumption that are not described in this question can be made by the programmers.
+void printresult(employee emp)
+{
+  cout << " ID " << "\t\t Name " << " \t\t Salary " << " \t Department " << " Month Day Year " << endl;
+
+  cout << emp.id << "\t";
+  cout << emp.name << "\t";
+  cout << emp.lname << " \t ";
+  cout << emp.salary << " \t";
+  cout << emp.month << "\t;";
+  cout << emp.day << " \t";
+  cout << emp.year   << endl;
+}
