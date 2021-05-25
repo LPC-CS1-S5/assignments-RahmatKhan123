@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cstring>
 #include <string>
 using namespace std;
 int countoccerrences(char *str, string word);
@@ -8,13 +9,12 @@ int main()
   char str[] = "Lorem ipsum dolor amet consectetur adipiscing elit. Quibus natura iur a responderit non esse verum aliunde finem beate vivendi, a se principia rei gerendero peti; Qu ae enim adhuc protulist, popularia sunt, engo autem a te elegantiora desidero. Duo reges; cons tructio interrete. Tum Lucius: Mihi vero ista valde probata sunt, squad item fratri puto. nestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus: Quid tu inquit tu inquit, huc? Et homint, qul ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?" ; 
 
   string userinput;
+  char occures;
 
   cout << "Enter a string from the str array, i will count the occurrences: " << endl;
   cin >> userinput;
 
-  cout << "the number of your word occurrence count is: " << endl;
-
-  countoccerrences(str, userinput);
+  cout << "the number of your word occurrence count is: " << countoccerrences(str, userinput);
 }
 
 int countoccerrences(char *str, string userinput)
@@ -34,8 +34,9 @@ int countoccerrences(char *str, string userinput)
   for(int i = 0; i < a.size(); i++)
   {
      // if match found increase count
-    if (userinput == a[i])
+    if(userinput == a[i])
       c++;
+    
     return c;
   }
 }
@@ -50,7 +51,7 @@ int countoccerrences(char *str, string userinput)
 
 
 //Make the program that counts the given word occurrences in the string "words" and elaborate on detailed algorithms.
-// we will for the user input and save it ti the "userinput". the string is as show bellow.
+// we will for the user input and save it till the "userinput". the string is as show bellow.
 //string userinput;
 //string words = "Lorem ipsum dolor amet consectetur adipiscing elit. Quibus natura iur a responderit non esse verum aliunde finem beate vivendi, a se principia rei gerendero peti; Qu ae enim adhuc protulist, popularia sunt, engo autem a te elegantiora desidero. Duo reges; cons tructio interrete. Tum Lucius: Mihi vero ista valde probata sunt, squad item fratri puto. nestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus: Quid tu inquit tu inquit, huc? Et homint, qul ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?";
 
