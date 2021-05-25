@@ -3,13 +3,14 @@
 #include <cstring>
 #include <string>
 using namespace std;
-int countoccerrences(char *str, string word);
+int countoccerrences(char *str, string userinput);
 int main()
 {
   char str[] = "Lorem ipsum dolor amet consectetur adipiscing elit. Quibus natura iur a responderit non esse verum aliunde finem beate vivendi, a se principia rei gerendero peti; Qu ae enim adhuc protulist, popularia sunt, engo autem a te elegantiora desidero. Duo reges; cons tructio interrete. Tum Lucius: Mihi vero ista valde probata sunt, squad item fratri puto. nestiarum vero nullum iudicium puto. Nihil enim iam habes, quod ad corpus referas; Deinde prima illa, quae in congressu solemus: Quid tu inquit tu inquit, huc? Et homint, qul ceteris animantibus plurimum praestat, praecipue a natura nihil datum esse dicemus?" ; 
 
   string userinput;
   char occures;
+
 
   cout << "Enter a string from the str array, i will count the occurrences: " << endl;
   cin >> userinput;
@@ -37,8 +38,8 @@ int countoccerrences(char *str, string userinput)
     if(userinput == a[i])
       c++;
     
-    return c;
   }
+  return c;
 }
 
  
