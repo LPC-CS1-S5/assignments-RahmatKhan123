@@ -1,4 +1,4 @@
-//When we run the following cod, shoe each value for vairable i.j and numbers[j] and numbers[j+] at line 16 in every iteration(if statement of inner for-loop) also show the entire array of elements after line 17 at every iteration.(tip:Recommened to use the "Debugger" and make breakpoint at line16) 
+//When we run the following cod, show each value for vairable i.j and numbers[j] and numbers[j+1] at line 16 in every iteration(if statement of inner for-loop) also show the entire array of elements after line 17 at every iteration.(tip:Recommened to use the "Debugger" and make breakpoint at line16) 
 // and the next statement after line17
 
 #include <iostream>

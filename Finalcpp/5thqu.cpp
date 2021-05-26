@@ -31,85 +31,43 @@ Grade g;
 // Chapter 12. Advanced File Operations
 // Lab 12-1. MakeBinFile
 
-
-#include	<iostream>
-#include 	<fstream>
-#include	<sstream>
-#include	<string>
+#include <iostream>
+#include <fstream>
 #include <iomanip>
-using  namespace	std;
+#include <string>
+using namespace std;
 
-struct Namerecords {
-	string	stname;
-	string 	sex;
-	int 	year;
-	string 	name;
-	int 	count;
+const unsigned short N = 5;
+
+struct Scores
+{
+  double sc[N];
+  string grades;
 };
-
-void 	printNameRecords(Namerecords);
-int		makeBinFile(void);
-
-
-int		main()
+struct Grade{
+  string fisrt;
+  string last;
+  string ssn;
+  Scores score;
+};
+Grade g;
+void printstruct(Grade);
+int main()
 {
-	int		numrec;
-	numrec = makeBinFile();
-	cout << "Total " << numrec << " name records are created in the \"namerecords.bin\" file.\n" ;
+  ifstream ofs;
+
+  ofs.open("grade.bin");
+  
+  while(ofs.write(char *)&g, sizeof(g)))
+  {
+    ofs.open("grade.bin");
+  }
 }
-
-int		makeBinFile(void)
+void ptrintstruct(Grade g)
 {
-
-	ifstream	ifso;
-	ofstream	ofso;
-	Namerecords nr;
-	string 		buf, field;
-	int			i=0, fcnt=0;
-	stringstream ss;
-
-	ifso.open("allstates.txt", fstream::in);
-	ofso.open("namerecords.bin", fstream::out);
-	if (!ifso || !ofso ){
-		cout << "Open Error\n";
-		exit(0);
-	}
-
-	while(ifso >> buf) {
-		ss << buf;
-		while(getline(ss, field, ',')) {
-			switch(fcnt){
-				case 0:
-						nr.stname = field;
-						break;
-				case 1:
-						nr.sex = field;
-						break;
-				case 2:
-						nr.year = stoi(field);
-						break;
-				case 3:
-						nr.name = field;
-						break;
-				case 4:
-						nr.count = stoi(field);
-						break;
-			}
-			fcnt = ++fcnt % 5;
-		}
-		ss.clear();
-		ofso.write((char *)&nr, sizeof(nr));
-		cout << i << "::" << sizeof(nr) << " bytes writing " ;
-		printNameRecords(nr);
-		i++;
-	}
-	return i;
-}
-void 		printNameRecords(Namerecords nr)
-{
-		cout << setw(5) << nr.stname << "\t";
-		cout << setw(3) << nr.sex << "\t";
-		cout << setw(5) << nr.year << "\t";
-		cout << setw(10) << nr.name << "\t\t";
-		cout << setw(5) << nr.count << endl;
+  cout << "Name : " << g.first << "  " << g.last << " \t " << g.score << " \t " << g.ssn << " \n";
+  cout << "\tScores: ";
+  for (int i =0; i<N; i++)
+    cout << showpoint << setprecision(2) << g.score.sc[i] << "\t";
+  cout << "Grade " << g.score.grade << endl;
 }
