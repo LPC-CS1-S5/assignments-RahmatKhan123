@@ -9,7 +9,7 @@ int main()
   int number1[SIZE1] = {2, 3, 5, 9, 10};
   int number2[SIZE2] = {1, 2, 3, 5, 9, 11, 13, 15, 17};
 
-  for (int i = 0; i <5; i++)
+  for (int i = 0; i <=5; i++)
   {
     for (int j = 0; j < 10; j++)
     {
